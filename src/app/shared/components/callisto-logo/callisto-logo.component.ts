@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./callisto-logo.component.scss'],
 })
 export class CallistoLogoComponent {
-  @Input() scale: string = '4rem';
+  @Input() scale: number = 1;
   @Input() colors: Partial<{
     planetTop: string;
     planetBottom: string;
@@ -14,5 +14,6 @@ export class CallistoLogoComponent {
     ringLeft: string;
     ringCenter: string;
     callisto: string;
+    webAndGraphic: string;
   }> = {};
 }

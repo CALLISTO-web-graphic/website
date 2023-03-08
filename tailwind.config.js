@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         nasalization: ["Nasalization", "sans-serif"],
+        "reem-kufi": ["Reem Kufi", "sans-serif"],
       },
     },
   },
