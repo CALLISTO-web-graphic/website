@@ -1,0 +1,9 @@
+<div class="flex flex-col justify-around text-xl h-full">
+  <span
+    *ngFor="let item of navOptions; let i = index"
+    class="transition-all delay-{{ opacity * i }}"
+    [ngStyle]="{ opacity: opacity }"
+  >
+    {{ item.name }}
+  </span>
+</div>

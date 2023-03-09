@@ -15,3 +15,12 @@
   transform: translateY(10rem);
   transition: all 0.5s ease-in-out;
 }
+
+//infinetly move down and up animation
+.move-down {
+  animation: move-down 2s infinite;
+}
+
+.animate-slower {
+  animation-duration: 2.5s;
+}

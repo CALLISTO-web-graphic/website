@@ -1,6 +1,6 @@
 <div class="background-gradient h-screen overflow-hidden text-white">
   <div
-    class="flex flex-col justify-center items-center min-h-screen transition-all duration-300"
+    class="flex flex-col justify-around items-center min-h-screen transition-all duration-300 lg:pt-20 lg:m-20"
     [ngStyle]="{ scale: logoScale, opacity: logoOpacity }"
   >
     <callisto-logo
@@ -14,11 +14,54 @@
         webAndGraphic: 'white'
       }"
     ></callisto-logo>
+    <div
+      class="flex flex-col justify-end relative"
+      *ngIf="mouseAnim | async as anim"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 220.065 343.742"
+        class="h-24 w-24"
+        fill="white"
+        xmlns:v="https://vecta.io/nano"
+      >
+        <g>
+          <path
+            d="M110.21,6.849L110.21,6.849c28.216,0,53.861,11.538,72.45,30.127
+          c18.589,18.588,30.127,44.234,30.127,72.449v123.518c0,28.215-11.538,53.861-30.127,72.449
+          c-18.589,18.589-44.234,30.127-72.449,30.127h-0.001c-28.215,0-53.86-11.538-72.449-30.127
+          c-18.589-18.588-30.127-44.234-30.127-72.449V109.425c0-28.215,11.538-53.861,30.127-72.449S81.995,6.849,110.21,6.849
+          L110.21,6.849z M110.211,19.344L110.211,19.344c-24.767,0-47.286,10.136-63.616,26.466s-26.466,38.85-26.466,63.615v123.518
+          c0,24.766,10.136,47.285,26.466,63.615c16.33,16.33,38.85,26.467,63.615,26.467h0.001c24.766,0,47.285-10.137,63.615-26.467
+          c16.33-16.33,26.466-38.85,26.466-63.615V109.425c0-24.766-10.136-47.285-26.466-63.615S134.977,19.344,110.211,19.344z"
+          />
+          <path
+            d="M95.362,112.893V54.731c0-4.088,1.669-7.801,4.359-10.49c2.689-2.689,6.402-4.359,10.49-4.359
+          c4.087,0,7.801,1.669,10.49,4.359c2.689,2.689,4.359,6.403,4.359,10.49v58.162c0,4.087-1.669,7.801-4.359,10.49
+          c-2.689,2.689-6.402,4.359-10.489,4.359c-4.088,0-7.801-1.669-10.49-4.359C97.032,120.694,95.362,116.981,95.362,112.893
+          L95.362,112.893z M103.288,54.731v58.162c0,1.9,0.78,3.63,2.037,4.886c1.256,1.257,2.986,2.037,4.886,2.037
+          c1.899,0,3.629-0.78,4.886-2.037c1.257-1.257,2.037-2.987,2.037-4.886V54.731c0-1.9-0.78-3.63-2.036-4.886
+          c-1.257-1.257-2.987-2.037-4.886-2.037c-1.9,0-3.63,0.78-4.886,2.037C104.068,51.102,103.288,52.832,103.288,54.731z"
+          />
+        </g>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 98.529 130.741"
+        class="h-8 absolute transform bottom-3 left-[37%] -translate-x-1/2 -translate-y-1/2 animate-bounce animate-slower"
+        xmlns:v="https://vecta.io/nano"
+      >
+        <path
+          d="M57.8 127.522l36.337-31.947a12.93 12.93 0 0 0-17.071-19.416L62.192 89.236V12.927A12.93 12.93 0 0 0 49.264 0a12.93 12.93 0 0 0-12.927 12.927v76.309L21.463 76.159c-5.361-4.715-13.53-4.189-18.243 1.173A12.87 12.87 0 0 0 0 85.862c0 3.588 1.485 7.158 4.392 9.713l36.337 31.947a12.93 12.93 0 0 0 17.071 0z"
+          fill="white"
+        />
+      </svg>
+    </div>
   </div>
 
   <div
     #content
-    class="absolute top-0 bg-black/40 p-20 h-screen overflow-y-scroll transition-all duration-1000"
+    class="absolute top-0 bg-black/40 p-20 h-screen w-screen overflow-y-scroll transition-all duration-1000"
     [ngClass]="{
       'pointer-events-none ': logoOpacity > 0.1
     }"
@@ -26,170 +69,6 @@
       opacity: 1 - logoOpacity
     }"
   >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim
-    libero id leo rhoncus interdum. Suspendisse nisi odio, bibendum eget
-    condimentum vitae, lacinia ut tellus. Sed at porta tellus. Donec euismod
-    ipsum sit amet justo suscipit, sed condimentum orci tincidunt. Sed rhoncus
-    dui dui, sed tempor diam venenatis ac. Suspendisse lacinia tincidunt turpis
-    mattis semper. Cras id diam et velit luctus auctor. Vestibulum sollicitudin
-    sapien sed nibh consectetur porttitor. Nam nisi libero, finibus aliquam
-    sodales sodales, vulputate quis ante. Sed at condimentum ex. Vestibulum et
-    aliquet quam. Etiam convallis est eu justo ornare consequat. Donec porttitor
-    lectus enim, ut lacinia urna pellentesque ut. Vivamus placerat nisi
-    facilisis diam placerat, ullamcorper fringilla dolor viverra. Nulla
-    facilisi. Nullam imperdiet sodales velit ut finibus. Nunc id eleifend lacus.
-    Mauris accumsan consectetur erat, ut iaculis mauris. Etiam dui ligula, porta
-    vitae eros a, convallis consequat leo. Quisque eu velit erat. Pellentesque
-    non nulla felis. Quisque lacinia auctor urna, eu vestibulum enim mollis non.
-    Donec rhoncus aliquet turpis, non imperdiet diam tincidunt eu. Nullam
-    gravida commodo lorem, nec vulputate nulla sollicitudin non. Morbi vitae
-    gravida nunc, nec scelerisque turpis. Aliquam blandit, libero in tincidunt
-    lobortis, est neque condimentum turpis, ac porttitor lorem enim ut justo.
-    Mauris rhoncus nisl massa, sit amet tristique tortor euismod at. Donec vitae
-    felis sed felis ultrices semper quis eget erat. Pellentesque viverra erat
-    lectus, ac tempus nisl auctor sed. Curabitur sit amet efficitur tellus. Ut
-    convallis efficitur est vel semper. Duis eros ante, varius in purus eu,
-    consectetur interdum odio. Sed cursus, mauris ut bibendum vulputate, enim
-    libero varius urna, cursus efficitur felis sem ac nunc. Class aptent taciti
-    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc
-    porttitor massa id dignissim aliquam. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia curae; Nam ullamcorper quis
-    metus vitae euismod. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. Nullam dignissim quam quis porttitor
-    pretium. Donec eget eros vel nulla interdum iaculis sit amet in lacus.
-    Nullam malesuada in tellus vitae placerat. Phasellus sit amet luctus lacus.
-    Pellentesque faucibus ultricies sapien, vitae dapibus eros sollicitudin
-    imperdiet. Proin viverra tellus id nisl lobortis, a dignissim orci tempor.
-    Ut nec enim augue. Nam faucibus tellus ipsum, porta lacinia libero ultricies
-    ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-    ridiculus mus. Etiam at massa cursus, fermentum enim eu, gravida sapien.
-    Nulla laoreet tortor et ullamcorper feugiat. Phasellus maximus nibh in
-    tellus pharetra, sed ultricies metus molestie. Nullam a ante tincidunt,
-    rutrum ligula vel, dictum diam. Etiam id ante et augue pellentesque porta.
-    Quisque dui purus, cursus fermentum accumsan in, hendrerit in ligula.
-    Vestibulum vel lacus est. Nulla felis augue, fringilla id commodo eget,
-    lacinia vitae tortor. Duis ac magna leo. Donec eu lacus non ante lacinia
-    feugiat. Quisque sagittis urna at iaculis aliquet. Aliquam erat volutpat.
-    Donec et odio auctor, feugiat neque sed, aliquam velit. Duis non aliquet
-    massa. Nulla aliquam pretium lobortis. Morbi lobortis vulputate turpis.
-    Integer elit metus, facilisis id purus id, convallis tristique dui. Nulla
-    pulvinar dolor id velit condimentum, non ultrices elit hendrerit. Maecenas
-    posuere erat neque, vel interdum nisi laoreet ac. Suspendisse pulvinar,
-    purus sed blandit pharetra, arcu mauris pellentesque tellus, id volutpat
-    neque nunc nec metus. Sed eu turpis quis quam consequat porttitor et et
-    nisi. Donec vehicula libero non egestas blandit. Curabitur scelerisque
-    dictum pulvinar. Sed massa dui, consectetur eu massa sed, sagittis elementum
-    nulla. Nam vel hendrerit tortor. Morbi sed sapien sit amet felis hendrerit
-    pretium. Proin varius risus ut nulla bibendum cursus in non odio. Donec
-    scelerisque odio vitae arcu pellentesque, a consectetur ex suscipit.
-    Suspendisse potenti. Quisque laoreet sed mi sit amet rutrum. Donec urna dui,
-    tempus quis ante ac, condimentum malesuada turpis. Phasellus ac dolor
-    scelerisque erat suscipit convallis. Morbi quis iaculis nisi, a mollis erat.
-    Vivamus id feugiat quam, vel vehicula sapien. Aliquam erat volutpat. Integer
-    venenatis fringilla sapien. Morbi id vulputate ligula. Etiam quis massa
-    hendrerit, condimentum sem vel, luctus mi. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia curae; Nam commodo auctor
-    tellus, eget rhoncus quam. Ut feugiat neque metus, non varius ex placerat
-    id. Etiam sollicitudin, urna in consequat scelerisque, nibh erat
-    pellentesque velit, vel interdum lorem nibh sodales ipsum. Vivamus et justo
-    nisl. Mauris purus nisl, congue at rutrum non, pulvinar vel tellus. Maecenas
-    ligula urna, posuere et ex nec, aliquet eleifend elit. Etiam ornare nunc
-    eget faucibus dapibus. Duis eleifend magna non arcu faucibus malesuada.
-    Maecenas ac tortor non lorem cursus ultrices eget sed justo. Donec tempus
-    felis ipsum. Fusce vel velit a odio aliquet consequat eu ut lectus. Donec
-    massa quam, laoreet ut est ac, tincidunt fermentum justo. Praesent pretium
-    nulla arcu, in sollicitudin arcu pellentesque eu. In ex turpis, mollis
-    bibendum dignissim sed, auctor sed erat. Duis ut rutrum augue, vitae
-    efficitur lacus. Nam congue laoreet diam eget egestas. In hac habitasse
-    platea dictumst. Praesent at orci libero. Nullam in felis ac justo accumsan
-    condimentum. Fusce vestibulum nisl lorem, nec tempor libero laoreet vitae.
-    Proin tempor maximus pharetra. Morbi convallis ullamcorper ex, sit amet
-    consequat justo rhoncus sed. Nullam id dignissim dolor. Proin vel porttitor
-    augue. Suspendisse consequat quis orci vitae bibendum. Nunc rhoncus
-    fringilla tellus, facilisis facilisis purus dapibus eget. Nunc a purus sed
-    nisl eleifend dictum. Suspendisse pellentesque commodo tortor, eget
-    convallis erat. Vivamus leo est, cursus a nibh quis, condimentum placerat
-    erat. Aenean rutrum tempus nibh, eget mollis nisi imperdiet a. Pellentesque
-    luctus vulputate enim vel tempor. Quisque sodales eros vel pellentesque
-    eleifend. Etiam sit amet arcu ut lectus gravida lacinia a in ligula. Quisque
-    sit amet volutpat ipsum. Pellentesque habitant morbi tristique senectus et
-    netus et malesuada fames ac turpis egestas. Nulla placerat mauris eget
-    tincidunt tincidunt. Nam facilisis pretium velit id convallis. Morbi sit
-    amet mauris sit amet felis tristique imperdiet. Nam est augue, volutpat eget
-    magna eget, ultrices tristique nunc. Mauris dictum euismod sem, eget
-    convallis velit egestas vel. Integer a porttitor lectus. Duis vitae erat
-    quis nunc feugiat rutrum at eu velit. Praesent lectus lacus, posuere id
-    malesuada eu, cursus ac arcu. Maecenas sollicitudin malesuada accumsan.
-    Etiam auctor condimentum ante, eget semper est viverra vitae. Etiam
-    fringilla porta pretium. Donec convallis blandit ex et lobortis. Curabitur
-    molestie luctus ipsum, a porta augue ornare ac. Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit. Suspendisse ac ipsum orci. In laoreet rutrum
-    molestie. In suscipit posuere fringilla. Suspendisse diam libero, consequat
-    quis pretium nec, auctor in augue. Nulla ut sem lectus. Nam quis tortor
-    placerat mauris egestas tempor. Vestibulum ut ornare sapien. Nam ut egestas
-    neque. Proin dapibus tortor sed accumsan fermentum. Class aptent taciti
-    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-    Vestibulum lacinia, urna sed molestie auctor, enim neque pharetra ante, in
-    efficitur diam neque id sapien. Pellentesque pharetra ex ac tellus sodales
-    dapibus. Proin lorem justo, egestas at iaculis ac, elementum vitae purus.
-    Maecenas ligula quam, interdum in semper vitae, auctor laoreet eros. Aenean
-    vitae iaculis enim. Donec vitae quam et justo aliquam condimentum. Phasellus
-    elementum tincidunt ipsum, sit amet luctus neque. Maecenas suscipit leo
-    orci. Sed aliquam magna libero, at dapibus risus sollicitudin eu. Orci
-    varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-    mus. Integer lobortis quam ex, id posuere quam ultrices id. In ac venenatis
-    orci. Cras sodales magna erat, molestie mollis felis tincidunt sed. Donec ut
-    mattis magna, sit amet condimentum ligula. Vivamus at scelerisque sapien,
-    sed ornare eros. Vestibulum ullamcorper mollis massa ac vehicula. Aenean
-    scelerisque elementum odio, ac pretium dolor finibus at. Sed vitae commodo
-    nulla. Proin et lorem purus. Maecenas porta egestas pellentesque. Aliquam
-    erat volutpat. Aliquam condimentum velit vulputate auctor tempor. Nullam
-    auctor fermentum elit at dictum. Mauris bibendum gravida est. Quisque orci
-    lacus, bibendum a euismod vel, ultricies eu erat. Vivamus eu suscipit est.
-    In sem tortor, iaculis a tempor non, rutrum id mauris. Etiam sodales velit
-    mollis metus viverra varius. Integer elementum metus tortor, eget dapibus mi
-    rutrum id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-    ullamcorper sapien est, mollis convallis elit iaculis nec. Vivamus nec
-    ligula lacinia, pretium justo id, blandit enim. Etiam efficitur aliquam
-    purus, quis vehicula purus finibus in. Nullam sollicitudin lacus sit amet
-    massa efficitur, sit amet varius est porta. Maecenas elementum nulla quis
-    lorem pellentesque scelerisque. Duis vel fermentum nibh. Ut vitae lobortis
-    dolor. Duis in sapien vel lectus mollis imperdiet. Nullam consectetur, dolor
-    feugiat hendrerit dignissim, dolor ligula egestas velit, non laoreet quam
-    arcu quis diam. Aenean cursus dignissim sem, pulvinar lobortis tellus
-    maximus non. Vestibulum sed porttitor augue, sed commodo libero. In dictum
-    ornare consectetur. Sed at lectus quam. Etiam sed pellentesque arcu.
-    Suspendisse potenti. Pellentesque non enim magna. Phasellus a blandit massa,
-    quis accumsan est. Aenean et tristique velit, congue laoreet nulla.
-    Suspendisse a pretium urna, iaculis elementum ligula. Cras elementum nec
-    metus sed accumsan. Phasellus non dolor viverra nisi sollicitudin tempus.
-    Donec eleifend nec nisl ut faucibus. Pellentesque ex nunc, dignissim in
-    volutpat vel, pellentesque sit amet mauris. Pellentesque porta in velit sed
-    semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-    posuere cubilia curae; Cras consequat odio a placerat dictum. Cras lacinia
-    viverra tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nullam auctor, urna sed laoreet finibus, sem sem fringilla libero, sit amet
-    commodo dui nibh non lectus. Fusce et mattis neque. Orci varius natoque
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi
-    egestas venenatis eros. Quisque congue aliquet vehicula. Vestibulum tempor
-    ante at ipsum varius, quis aliquet magna porttitor. Aliquam erat volutpat.
-    Maecenas vitae lorem non nulla fringilla consectetur. Suspendisse potenti.
-    Praesent lobortis vel nisi sed blandit. Vestibulum accumsan mattis pharetra.
-    Phasellus neque odio, semper nec pretium ac, pretium ac lectus. Morbi quis
-    porta dui. Nam elementum mattis lectus, et condimentum risus feugiat vel.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos. Duis blandit, arcu eu tincidunt auctor, sem odio cursus
-    odio, vitae euismod arcu orci ac sem. Curabitur ut nulla interdum, aliquet
-    ante sed, pellentesque dui. Vestibulum porttitor ex quis urna pretium
-    cursus. Fusce et vehicula lorem, at tempus eros. Sed vitae dolor ullamcorper
-    risus eleifend faucibus vitae ut tellus. Aliquam aliquam ligula ligula, a
-    tristique enim condimentum eu. In venenatis fringilla ex tincidunt
-    ullamcorper. Vivamus condimentum, diam vitae porttitor tempor, massa purus
-    consectetur neque, et bibendum arcu massa et ligula. Donec eget lectus
-    ipsum. Vivamus at commodo metus, dictum egestas augue. Pellentesque in nulla
-    sed nunc egestas sagittis. Sed volutpat, ipsum a congue dictum, tortor arcu
-    gravida metus, ac mattis nibh ligula quis odio. Phasellus vestibulum cursus
-    ligula, eget fringilla augue egestas non. Suspendisse massa neque,
-    consectetur ac elementum in, pharetra nec leo. Phasellus ut felis ex.
+    <callisto-nav></callisto-nav>
   </div>
 </div>

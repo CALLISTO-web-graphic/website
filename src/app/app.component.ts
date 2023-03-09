@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import * as AOS from 'aos';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,12 @@ export class AppComponent {
   logoScale = 1;
   logoOpacity = 1;
 
+  public mouseAnim = new BehaviorSubject(1);
+
   constructor() {
     AOS.init();
+
+    this.mouseAnimationHandler();
   }
 
   @HostListener('wheel', ['$event'])
@@ -71,4 +76,21 @@ export class AppComponent {
       return;
     }
   }
+
+  public mouseAnimationHandler = () => {
+    //generate an increasing number between 0 and 100, push it to the mouseAnim subject
+    //iif i > 100, clear the interval and restart the animation
+    let i = 1;
+
+    const interval = setInterval(() => {
+      this.mouseAnim.next(i);
+
+      i++;
+
+      if (i > 100) {
+        clearInterval(interval);
+        this.mouseAnimationHandler();
+      }
+    }, 10);
+  };
 }
