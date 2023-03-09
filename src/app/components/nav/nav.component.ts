@@ -13,25 +13,37 @@ export class NavComponent implements OnInit {
     link: string;
   }[] = [
     {
-      name: 'Home',
-      link: 'home',
+      name: 'Creazione Siti Web',
+      link: 'website',
     },
     {
-      name: 'Su di noi',
-      link: 'about',
+      name: 'Sviluppo Brand',
+      link: 'website',
     },
     {
-      name: 'Servizi',
-      link: 'services',
+      name: 'Grafica Pubblicitaria',
+      link: 'website',
     },
-    {
-      name: 'Contatti',
-      link: 'contacts',
-    },
-    {
-      name: 'Lavora con noi',
-      link: 'work-with-us',
-    },
+    // {
+    //   name: 'Home',
+    //   link: 'home',
+    // },
+    // {
+    //   name: 'Su di noi',
+    //   link: 'about',
+    // },
+    // {
+    //   name: 'Servizi',
+    //   link: 'services',
+    // },
+    // {
+    //   name: 'Contatti',
+    //   link: 'contacts',
+    // },
+    // {
+    //   name: 'Lavora con noi',
+    //   link: 'work-with-us',
+    // },
   ];
 
   constructor() {}

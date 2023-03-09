@@ -4,3 +4,7 @@
 @tailwind utilities;
 @import url("https://fonts.cdnfonts.com/css/nasalization-2");
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
+
+.smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
